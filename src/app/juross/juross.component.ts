@@ -11,18 +11,20 @@ export class JurossComponent implements OnInit {
   t: number;
 
   constructor() {
-    this.c = 1;
-    this.i = 1;
-    this.t = 1;
+    this.c;
+    this.i;
+    this.t;
   }
 
-  getJuross() {
-    let conta: number = this.c * this.i * this.c;
-    return conta;
-  }
-
-  getJuros() {
-    let list: number[] = []
+  getResultado() {
+    if (this.c >= 0 && this.i >= 0) {
+      if (this.t >= 0) {
+        let juros: number = this.c * (this.i / 100) * this.t;
+        let final: number = this.c + juros;
+        let conversao = final.toFixed(2);
+        return conversao;
+      }
+    }
   }
 
   ngOnInit() {}

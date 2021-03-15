@@ -1,17 +1,26 @@
 <div>
   <h3>Juros Simples</h3>
 
-  <input type="number" [(ngModel)]="c" />
-  <input type="number" [(ngModel)]="i" />
-  <input type="number" [(ngModel)]="t" />
+  <div>
+    Capital total emprestado:
+    <input placeholder="Capital" type="number" [(ngModel)]="c" />
+  </div>
+  <div>
+    Taxa de Juros ao mês
+    <input type="number" placeholder="Taxa" [(ngModel)]="i" />
+  </div>
+  <div>
+    Total de meses para pagar
+    <input type="number" placeholder="Tempo" [(ngModel)]="t" />
+  </div>
 
   <table class="table">
     <thead>
       <tr>
         <th>Resultado</th>
       </tr>
-      <tr *ngFor="let item of getJuross()">
-        <td></td>
+      <tr>
+        <td *ngIf="getResultado()">R${{getResultado()}}</td>
       </tr>
     </thead>
   </table>
