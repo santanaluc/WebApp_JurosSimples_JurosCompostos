@@ -8,7 +8,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { RouterModule } from "@angular/router";
 import { JurossComponent } from "./juross/juross.component";
-import { JuroscComponent } from './jurosc/jurosc.component';
+import { JuroscComponent } from "./jurosc/jurosc.component";
+import { SobreComponent } from "./sobre/sobre.component";
 
 @NgModule({
   imports: [
@@ -16,10 +17,15 @@ import { JuroscComponent } from './jurosc/jurosc.component';
     FormsModule,
     RouterModule.forRoot([
       { path: "", component: HomeComponent },
-      { path: "juross", component: JurossComponent }
-      // {
-      //   // path: "veriparimpa", component: VeriparimpaComponent
-      // }
+      { path: "juross", component: JurossComponent },
+      {
+        path: "jurosc",
+        component: JuroscComponent
+      },
+      {
+        path: "sobre",
+        component: SobreComponent
+      }
     ])
   ],
   declarations: [
@@ -28,7 +34,8 @@ import { JuroscComponent } from './jurosc/jurosc.component';
     NavbarComponent,
     HomeComponent,
     JurossComponent,
-    JuroscComponent
+    JuroscComponent,
+    SobreComponent
   ],
   bootstrap: [AppComponent]
 })
