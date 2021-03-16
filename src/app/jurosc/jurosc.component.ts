@@ -10,9 +10,23 @@ export class JuroscComponent implements OnInit {
   i: number;
   t: number;
 
-  constructor() {}
+  constructor() {
+    this.c;
+    this.i;
+    this.t;
+  }
 
-  getResultado() {}
+  getJuros() {
+    if (this.c >= 0 && this.i >= 0) {
+      if (this.t >= 0) {
+        let montante: number = this.c * Math.pow(1 + this.i / 100, this.t);
+        let juros: number = montante - this.c;
+        return juros.toFixed(2);
+      }
+    }
+  }
+
+  acumular() {}
 
   ngOnInit() {}
 }
