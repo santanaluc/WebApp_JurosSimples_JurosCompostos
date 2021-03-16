@@ -8,6 +8,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { RouterModule } from "@angular/router";
 import { JurossComponent } from "./juross/juross.component";
+import { JuroscComponent } from './jurosc/jurosc.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { JurossComponent } from "./juross/juross.component";
     HelloComponent,
     NavbarComponent,
     HomeComponent,
-    JurossComponent
+    JurossComponent,
+    JuroscComponent
   ],
   bootstrap: [AppComponent]
 })
