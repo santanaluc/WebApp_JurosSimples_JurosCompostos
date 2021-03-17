@@ -1,22 +1,3 @@
 <app-navbar name="{{name}}"></app-navbar>
 <hr />
 <router-outlet></router-outlet>
-
-<div class="container-fluid">
-  <h2>Página Inicial</h2>
-  <div *ngIf="isMorning()">
-    Bom dia
-  </div>
-  <div *ngIf="isAfternoon()">
-    Boa tarde
-  </div>
-  <div *ngIf="isNight()">
-    Boa noite
-  </div>
-  <div *ngIf="isDawn()">
-    Vá dormir
-  </div>
-  <h3>Data / hora:</h3>
-  <div>{{timestamp}}</div>
-  <div>Agora são {{getHour()}}h</div>
-</div>
